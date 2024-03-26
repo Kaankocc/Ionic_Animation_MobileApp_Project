@@ -1,0 +1,165 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #b24444;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  
+  .box {
+    margin: 3%;
+    display: inline-block;
+    position: relative;
+    background:#cc3232;
+    height: 6rem;
+    border-radius: 50%;
+    width: 6rem;
+    outline: 0;
+    overflow: none;
+  }
+  
+  ion-content {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    right: 50%;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  
+  .box::before {
+    content: "";
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -15%;
+    height: 125%;
+    width: 125%;
+    background: var(--background);
+    border-radius: 45%;
+    animation: spin1 4s ease-in-out  ;
+    animation-fill-mode: forwards;
+    
+  }
+  
+  .box2 {
+    margin: 3%;
+    display: inline-block;
+    position: relative;
+    background: #e7b416;
+    height: 6rem;
+    border-radius: 50%;
+    width: 6rem;
+    outline: 0;
+    overflow: none;
+  }
+  
+  .box2::before {
+    content: "";
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box2::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -15%;
+    height: 125%;
+    width: 125%;
+    background: var(--background);
+    border-radius: 45%;
+    animation: spin2 4s ease-in-out  ;
+    animation-fill-mode: forwards;
+    
+  }
+  
+  .box3 {
+    margin: 3%;
+    display: inline-block;
+    position: relative;
+    background: #2dc937;
+    height: 6rem;
+    border-radius: 50%;
+    width: 6rem;
+    outline: 0;
+    overflow: none;
+  }
+  
+  .box3::before {
+    content: "";
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box3::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -15%;
+    height: 125%;
+    width: 125%;
+    background: var(--background);
+    border-radius: 45%;
+    animation: spin3 4s ease-in-out  ;
+    animation-fill-mode: forwards;
+    
+  }
+  
+  .center {
+    text-align: center;
+    }
+  
+  .top {
+    display: flex; // Assuming you are using flexbox for layout
+    align-items: flex-start; // Align items to the top of the container
+    margin-bottom: 60%;
+  }
+  // @keyframes spin {
+  //   0% {
+  //     transform: translateY(0) rotate(0deg);
+  //   }
+  //   100% {
+  //     transform: translateY(-100%) rotate(500deg);
+  //   }
+    
+  // }

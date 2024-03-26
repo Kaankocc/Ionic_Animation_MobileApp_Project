@@ -1,20 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+
+<ion-content class="ion-padding">
+
+
+  <ion-card color="light">
+    <img alt="Silhouette of mountains" src="/assets/shapes.png" />
+    <ion-card-header>
+      <ion-card-title>Welcome!</ion-card-title>
+      <ion-card-subtitle>Designed by Kaan Koc</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+     This is a ionic app designed to provide a virtual animation work hours completed.
+     <br />
+     <br />
+     First, start by entiring the desired number of hours. Then, enter the hours that worked. 
+     <br />
+     <br />
+     <ion-item  color="white">
+      <ion-input label="Desired Hours:" type="max" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item color="white">
+      <ion-input label="Total Hours Worked:" type="max" placeholder=""></ion-input>
+    </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  
 </ion-content>

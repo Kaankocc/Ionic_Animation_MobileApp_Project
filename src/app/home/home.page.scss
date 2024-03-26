@@ -1,3 +1,8 @@
+ion-content{
+
+  --ion-background-color:	#4a5777;
+}
+
 #container {
   text-align: center;
 
@@ -17,7 +22,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #b24444;
 
   margin: 0;
 }
@@ -25,3 +30,22 @@
 #container a {
   text-decoration: none;
 }
+
+.center {
+  text-align: center;
+  }
+
+.top {
+  display: flex; // Assuming you are using flexbox for layout
+  align-items: flex-start; // Align items to the top of the container
+  margin-bottom: 60%;
+}
+// @keyframes spin {
+//   0% {
+//     transform: translateY(0) rotate(0deg);
+//   }
+//   100% {
+//     transform: translateY(-100%) rotate(500deg);
+//   }
+  
+// }
