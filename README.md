@@ -1,4 +1,4 @@
-![Alt Text](URL)
+![Alt Text](ezgif.com-video-to-gif-converter.gif)
 
 # Work Hours Tracker
 
