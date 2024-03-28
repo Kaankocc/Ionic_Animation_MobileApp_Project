@@ -1,6 +1,6 @@
 # Work Hours Tracker
 
-Work Hours Tracker is a mobile application developed using Ionic Angular. It allows users to input their total work hours and the hours they've worked, and visualize their progress through an animated display of three balls filling up according to the completion percentage.
+Work Hours Tracker is a mobile application developed using Ionic Angular. It allows users to input their total work hours and the hours they've worked and visualize their progress through an animated display of three balls filling up according to the completion percentage.
 
 ## Features
 
@@ -14,11 +14,11 @@ To run the application locally, follow these steps:
 
 1. Clone this repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/work-hours-tracker.git
+   git clone https://github.com/Kaankocc/Ionic_Animation_MobileApp_Project.git
 
 2. Navigate to the project directory.
    ```bash
-   cd work-hours-tracker
+   cd AnimationProject
 
 3. Install dependencies using npm.
    ```bash
