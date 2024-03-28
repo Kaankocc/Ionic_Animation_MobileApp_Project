@@ -1,29 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>WELCOME!</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 
 
 <ion-content class="ion-padding">
-  <h1 class="top">Welcome!</h1>
-
-  
   <div class="box"> </div>
   <div class="box2"> </div>
   <div class="box3"> </div>
   <div class="center">
   </div> 
 
-  <ion-card>
+
+
+  <ion-card color="light">
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title *ngIf="percent < 45">Keep up!</ion-card-title>
+      <ion-card-title *ngIf="percent >= 45 && percent <= 55">Halfway done!</ion-card-title>
+      <ion-card-title *ngIf="percent > 55 && percent < 100">Almost done!</ion-card-title>
+      <ion-card-title *ngIf="percent === 100">Good job!</ion-card-title>
+      <ion-card-title *ngIf="percent > 100">You are more than done!</ion-card-title>
+
     </ion-card-header>
   
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+    You have completed {{ percent.toFixed(1) }}% of your work hours 
+    <br/>
+    <br/>
+    <br/>
+    I hope you enjoyed the animation. You can press "Again" to go back. 
+
+    <ion-button class="container" (click)="navigate()">Again</ion-button>
     </ion-card-content>
   </ion-card>
+
+  
 </ion-content>

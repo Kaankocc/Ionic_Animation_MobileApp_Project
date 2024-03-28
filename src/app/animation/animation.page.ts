@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-animation',
@@ -7,17 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimationPage implements OnInit {
 
-  totalWorkHour = 100;
-  number: any;
-  constructor() { }
+  desiredHours: any;
+  totalHours: any;
+  percent: any;
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   async ngOnInit() {
 
-    this.number = 50;
+    this.route.queryParams.subscribe(params => {
+      if (params && params['desiredHours'] && params['totalHours']) {
+        this.desiredHours = parseInt(params['desiredHours']);
+        this.totalHours = parseInt(params['totalHours']);
+        // Now you have access to desiredHours and totalHours
+        // You can use them as needed in your component
+      }
+    });
 
-    var percentage = this.calculatePercentage(this.number, this.totalWorkHour / 3)
+    var percentage = this.calculatePercentage(this.totalHours, this.desiredHours / 3)
+    this.percent = ((100*this.totalHours)/ this.desiredHours);
     this.addRule(percentage);
-    console.log(this.number);
   }
 
  
@@ -30,17 +40,17 @@ export class AnimationPage implements OnInit {
     }
     else if (persentage > 100 && persentage <= 200)
     {
-      var number = (persentage - 100);
+      var totalHours = (persentage - 100);
       sheet.insertRule(`@keyframes spin1 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-100%) rotate(500deg); }  }  `, 1);
-      sheet.insertRule(`@keyframes spin2 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-${number}%) rotate(500deg); }  }  `, 1);
+      sheet.insertRule(`@keyframes spin2 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-${totalHours}%) rotate(500deg); }  }  `, 1);
     }
     else if (persentage > 200 && persentage < 300) 
     {
-      var number = (persentage - 200);
+      var totalHours = (persentage - 200);
 
       sheet.insertRule(`@keyframes spin1 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-100%) rotate(500deg); }  }  `, 1);
       sheet.insertRule(`@keyframes spin2 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-100%) rotate(500deg); }  }  `, 1);
-      sheet.insertRule(`@keyframes spin3 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-${number}%) rotate(500deg); }  }  `, 1);
+      sheet.insertRule(`@keyframes spin3 { 0% {transform: translateY(0) rotate(0deg);} 100% {transform: translateY(-${totalHours}%) rotate(500deg); }  }  `, 1);
     }
     else if (persentage >= 300)
     {
@@ -55,6 +65,12 @@ export class AnimationPage implements OnInit {
     return (100 * num) / total;
   }
 
+  navigate() {
   
+    this.router.navigate(['/']).then(() => {
+      // Reload the page after navigation
+      window.location.reload();
+    });
 
+}
 }
