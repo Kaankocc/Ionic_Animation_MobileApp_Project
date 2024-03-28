@@ -1,3 +1,5 @@
+![Alt Text](URL)
+
 # Work Hours Tracker
 
 Work Hours Tracker is a mobile application developed using Ionic Angular. It allows users to input their total work hours and the hours they've worked and visualize their progress through an animated display of three balls filling up according to the completion percentage.
